@@ -1,0 +1,545 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="663,737" sap2010:WorkflowViewState.IdRef="Flowchart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="52">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="673,672" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="Pincode" />
+      <Variable x:TypeArguments="x:String" Name="DateVariable" />
+      <Variable x:TypeArguments="x:String" Name="Response" />
+      <Variable x:TypeArguments="njl:JObject" Name="JsonObjects" />
+      <Variable x:TypeArguments="x:Int32" Name="SwitchFlow" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,114.5</av:PointCollection>
+        <x:Double x:Key="Width">639</x:Double>
+        <x:Double x:Key="Height">635.5</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID10</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,275.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,326.5 300,349</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="provides the user to choose the category" DisplayName="Category" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="1. Age 18 - 44 Dose 1&#xD;&#xA;2.Age 18 -44 Dose 2&#xD;&#xA;3. Age 45 &amp; above Dose 1&#xD;&#xA;4. Age 45 &amp; above Dose 2" Title="please enter the choice">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:Int32">[SwitchFlow]</OutArgument>
+        </ui:InputDialog.Result>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InputDialog>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,349</av:Point>
+              <av:Size x:Key="ShapeSize">200,22</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,371 300,380</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" DisplayName="HTTP Request" EndPoint="[&quot;https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=&quot;+Pincode+&quot;&amp;date=&quot;+DateVariable]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Result="[Response]" TimeoutMS="6000">
+            <ui:HttpClient.Attachments>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.Attachments>
+            <ui:HttpClient.Cookies>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.Cookies>
+            <ui:HttpClient.Headers>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.Headers>
+            <ui:HttpClient.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.Parameters>
+            <ui:HttpClient.UrlSegments>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+            </ui:HttpClient.UrlSegments>
+          </ui:HttpClient>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">133,380</av:Point>
+                  <av:Size x:Key="ShapeSize">334,60</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,440 300,506.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[JsonObjects]" JsonString="[Response]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:DeserializeJson>
+              <FlowStep.Next>
+                <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID6" DisplayName="Flow Switch" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
+                  <FlowSwitch.Default>
+                    <FlowStep x:Name="__ReferenceID7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">10,444.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">110,495.5 100,495.5 100,504.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;please select the correct category&quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:MessageBox>
+                      <FlowStep.Next>
+                        <x:Reference>__ReferenceID1</x:Reference>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowSwitch.Default>
+                  <FlowSwitch.Expression>
+                    <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="SwitchFlow" />
+                  </FlowSwitch.Expression>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">265,506.5</av:Point>
+                      <av:Size x:Key="ShapeSize">70,87</av:Size>
+                      <av:PointCollection x:Key="Default">265,528.25 235,528.25 235,470 210,470</av:PointCollection>
+                      <av:PointCollection x:Key="1Connector">265,550 235,550 235,530 200,530</av:PointCollection>
+                      <av:PointCollection x:Key="2Connector">335,528.25 365,528.25 365,470 380,470</av:PointCollection>
+                      <av:PointCollection x:Key="4Connector">335,550 357,550 357,540 390,540</av:PointCollection>
+                      <av:PointCollection x:Key="3Connector">265,571.75 235,571.75 235,590 200,590</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowStep x:Key="1" x:Name="__ReferenceID1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">0,504.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each for age 18 dose 1" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[JsonObjects(&quot;sessions&quot;)]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="njl:JObject">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="18_dose-1" sap:VirtualizedContainerService.HintSize="526,560" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="name" />
+                              <Variable x:TypeArguments="x:Int32" Name="Dose" />
+                              <Variable x:TypeArguments="x:Int32" Name="min_age_limit" />
+                              <Variable x:TypeArguments="x:String" Name="Vaccine" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="484,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[item("name").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[Dose]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[cint(item("available_capacity_dose1"))]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[min_age_limit]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[cint(item("min_age_limit"))]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[vaccine]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[item("vaccine").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <If Condition="[Dose&gt;0 and min_age_limit=18]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If.Then>
+                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Covid Vaccine Appointment Availability&quot;+&#xA;Environment.NewLine+&quot;Center Name :&quot;+ name+&#xA;Environment.NewLine+&quot;Available Dose1:&quot;+Dose.ToString+&#xA;Environment.NewLine+&quot;Minimum AGE limit :&quot;+ min_age_limit.ToString+&#xA;Environment.NewLine+&quot;Vaccine :&quot;+ vaccine]" />
+                              </If.Then>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                    </ui:ForEach>
+                  </FlowStep>
+                  <FlowStep x:Key="2" x:Name="__ReferenceID8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">380,444.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,51</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">480,495.5 480,514.5 490,514.5</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each for age 18 dose 2" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[JsonObjects(&quot;sessions&quot;)]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="njl:JObject">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="18_dose-2" sap:VirtualizedContainerService.HintSize="526,560" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="name" />
+                              <Variable x:TypeArguments="x:Int32" Name="Dose" />
+                              <Variable x:TypeArguments="x:Int32" Name="min_age_limit" />
+                              <Variable x:TypeArguments="x:String" Name="Vaccine" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="484,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[item("name").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[Dose]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[cint(item("available_capacity_dose2"))]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[min_age_limit]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[cint(item("min_age_limit"))]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[vaccine]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[item("vaccine").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <If Condition="[Dose&gt;0 and min_age_limit=18]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_3">
+                              <If.Then>
+                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Covid Vaccine Appointment Availability&quot;+&#xD;&#xA;Environment.NewLine+&quot;Center Name :&quot;+ name+&#xD;&#xA;Environment.NewLine+&quot;Available Dose2:&quot;+Dose.ToString+&#xD;&#xA;Environment.NewLine+&quot;Minimum AGE limit :&quot;+ min_age_limit.ToString+&#xD;&#xA;Environment.NewLine+&quot;Vaccine :&quot;+ vaccine]" />
+                              </If.Then>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                    </ui:ForEach>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID0">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">390,514.5</av:Point>
+                            <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each for age 45 dose 2" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[JsonObjects(&quot;sessions&quot;)]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="njl:JObject">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="45_dose 2" sap:VirtualizedContainerService.HintSize="526,560" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="name" />
+                                  <Variable x:TypeArguments="x:Int32" Name="Dose" />
+                                  <Variable x:TypeArguments="x:Int32" Name="min_age_limit" />
+                                  <Variable x:TypeArguments="x:String" Name="Vaccine" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="484,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                  <ui:MultipleAssign.AssignOperations>
+                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">[item("name").ToString]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[Dose]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[cint(item("available_capacity_dose2"))]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[min_age_limit]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[cint(item("min_age_limit"))]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[vaccine]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">[item("vaccine").ToString]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                    </scg:List>
+                                  </ui:MultipleAssign.AssignOperations>
+                                </ui:MultipleAssign>
+                                <If Condition="[Dose&gt;0 and min_age_limit=45]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_4">
+                                  <If.Then>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Covid Vaccine Appointment Availability&quot;+&#xD;&#xA;Environment.NewLine+&quot;Center Name :&quot;+ name+&#xD;&#xA;Environment.NewLine+&quot;Available Dose2:&quot;+Dose.ToString+&#xD;&#xA;Environment.NewLine+&quot;Minimum AGE limit :&quot;+ min_age_limit.ToString+&#xD;&#xA;Environment.NewLine+&quot;Vaccine :&quot;+ vaccine]" />
+                                  </If.Then>
+                                </If>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                      </FlowStep>
+                    </FlowStep.Next>
+                  </FlowStep>
+                  <x:Reference>__ReferenceID0<x:Key>4</x:Key></x:Reference>
+                  <FlowStep x:Key="3" x:Name="__ReferenceID9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">0,564.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each for age 45 dose 1" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[JsonObjects(&quot;sessions&quot;)]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="njl:JObject">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="45_dose 1" sap:VirtualizedContainerService.HintSize="526,560" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="name" />
+                              <Variable x:TypeArguments="x:Int32" Name="Dose" />
+                              <Variable x:TypeArguments="x:Int32" Name="min_age_limit" />
+                              <Variable x:TypeArguments="x:String" Name="Vaccine" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="484,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[item("name").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[Dose]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[cint(item("available_capacity_dose1"))]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[min_age_limit]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[cint(item("min_age_limit"))]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[vaccine]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[item("vaccine").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <If Condition="[Dose&gt;0 and min_age_limit=45]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_5">
+                              <If.Then>
+                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Covid Vaccine Appointment Availability&quot;+&#xD;&#xA;Environment.NewLine+&quot;Center Name :&quot;+ name+&#xD;&#xA;Environment.NewLine+&quot;Available Dose1:&quot;+Dose.ToString+&#xD;&#xA;Environment.NewLine+&quot;Minimum AGE limit :&quot;+ min_age_limit.ToString+&#xD;&#xA;Environment.NewLine+&quot;Vaccine :&quot;+ vaccine]" />
+                              </If.Then>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                    </ui:ForEach>
+                  </FlowStep>
+                </FlowSwitch>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID10">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,114.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,165.5 300,194.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" sap2010:Annotation.AnnotationText="Captures the Pincode from the user" DisplayName="Pincode" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Please enter the Pincode">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:String">[Pincode]</OutArgument>
+        </ui:InputDialog.Result>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InputDialog>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,194.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,245.5 300,275.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" sap2010:Annotation.AnnotationText="Takes the Date from the user" DisplayName="Date" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please enter the date in DD-MM-YYYY format">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">[DateVariable]</OutArgument>
+            </ui:InputDialog.Result>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InputDialog>
+          <FlowStep.Next>
+            <x:Reference>__ReferenceID2</x:Reference>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+  </Flowchart>
+</Activity>
